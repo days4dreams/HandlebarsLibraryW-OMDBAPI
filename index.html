@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OMDB API</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Handlebars template used to help with separation of concerns -->
+  <script id="movie-template" type="text/x-handlebars-template">
+    <p>
+      {{title}}
+      <br>
+      {{releaseDate}}
+      <br>
+      {{actors}}
+      <br>
+      <img src="{{poster}}">
+    </p>
+  </script>
+
+  <h1><i class="material-icons">search</i>OMDB API</h1>
+
+  <form class="pure-form">
+    <input id="searchField" class="input" placeholder="Search for movie title"></input>
+    <button id="searchBtn" class="pure-button pure-button-primary">Search</button>
+  </form>
+
+  <!--element to append results to-->
+  <div id="result"></div>
+
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
